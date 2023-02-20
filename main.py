@@ -13,15 +13,6 @@ screen.tracer(0)
 snake = Snake()
 food = Food()
 scoreboard = Scoreboard()
-        
-
-# snake
-# food
-# scoreboard
-
-
-# tim = Turtle()
-# print(tim)
 
 screen.listen()
 screen.onkey(snake.up, 'Up')
@@ -30,8 +21,6 @@ screen.onkey(snake.down, 'Down')
 screen.onkey(snake.left, 'Left')
 
 is_game_on = True
-
-
 while is_game_on:
     screen.update()
     time.sleep(0.1)
@@ -53,19 +42,6 @@ while is_game_on:
 
     # Detect collision with tail
     for segment in snake.segments[1:]:
-        # print(snake.head)
-        # print(snake.segments[1:])
-        # if snake.segments[1:].distance(segment) < 10:
-        #     scoreboard.game_over()
-        #     is_game_on = False
-
-
-        # if segment[1:] and snake.head.distance(segment) < 10:
-        #     scoreboard.game_over()
-        #     is_game_on = False
-
-        # if segment == snake.head:
-        #     pass
         if snake.head.distance(segment) < 10:
             scoreboard.game_over()
             is_game_on = False
