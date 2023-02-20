@@ -9,7 +9,7 @@ screen.title('Snake Game')
 screen.tracer(0)
 
 snake = Snake()
-snake.move()
+
         
 
 # snake
@@ -19,6 +19,16 @@ snake.move()
 
 # tim = Turtle()
 # print(tim)
+is_game_on = True
 
+while is_game_on:
+    screen.update()
+    snake.move()
+    time.sleep(0.1)
+    screen.listen()
+    screen.onkey(snake.up, 'Up')
+    screen.onkey(snake.right, 'Right')
+    screen.onkey(snake.down, 'Down')
+    screen.onkey(snake.left, 'Left')
 
 screen.exitonclick()
